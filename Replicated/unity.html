@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<head>
+    <!--<link rel="icon" href="assets/img/favicon.ico" type="icon/x-icon" />-->
+
+    <title>Unity projects</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+</head>
+<header class="main-header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="menu">
+            <nav class="desktop-nav">
+                <ul class="first-level">
+                    <li><a href="index.html" class="animation-link">Home</a></li>
+                    <li><a href="about.html" class="animation-link">about us</a></li>
+                    <li><a href="unity.html" class="animation-link">unity</a></li>
+                    <li><a href="android.html" class="animation-link">android</a></li>
+                    <li><a href="blog.html" class="animation-link">blog</a></li>
+                    <li><a href="contact.html" class="animation-link">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="site-hero2">
+    <div class="page-title">
+        <div><span class="big-title uppercase montserrat-text">Our unity projects</span></div>
+        <div class="small-title uppercase montserrat-text">Home / Unity</div>
+    </div>
+</div>
+<div class="portfolio">
+    <div class="container">
+        <div class="row col-md-3 col-sm-12">
+            <div class="big-title montserrat-text">
+                choose category
+            </div>
+            <ul class="portfolio_filter">
+                <li><a href data-filter="*" class="active">all</a></li>
+                <li><a href data-filter=".finished">finished</a></li>
+                <li><a href data-filter=".work_in_progress">work in progress</a></li>
+                <li><a href data-filter=".freelance">freelance</a></li>
+            </ul>
+        </div>
+        <div class="portfolio_container row col-md-9">
+            <div class="col-md-4 finished">
+                <a href="project.html" class="portfolio_item">
+                    <img src="assets/img/work-1.jpg" alt="image" />
+                    <div class="portable_item_hover">
+                        <div class="item_info">
+                            <span>Ball Game</span>
+                            <em>finished</em>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 work_in_progress">
+                <a href="project.html" class="portfolio_item">
+                    <img src="assets/img/work-2.jpg" alt="image" />
+                    <div class="portable_item_hover">
+                        <div class="item_info">
+                            <span>Farm Life</span>
+                            <em>work in progress</em>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 freelance">
+                <a href="project.html" class="portfolio_item">
+                    <img src="assets/img/work-3.jpg" alt="image" />
+                    <div class="portable_item_hover">
+                        <div class="item_info">
+                            <span>Alien's UFO</span>
+                            <em>freelance</em>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 freelance">
+                <a href="project.html" class="portfolio_item">
+                    <img src="assets/img/work-3.jpg" alt="image" />
+                    <div class="portable_item_hover">
+                        <div class="item_info">
+                            <span>Carcarich Model</span>
+                            <em>freelance</em>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="main-footer wow fadeInUp">
+    <div class="container">
+        <div class="col-md-8 col-sm-12">
+            <div class="row">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html" class="animation-link">Home</a></li>
+                        <li><a href="abot.html" class="animation-link">about us</a></li>
+                        <li><a href="services.html" class="animation-link">services</a></li>
+                        <li><a href="portfolio.html" class="animation-link">portfolio</a></li>
+                        <li><a href="blog.html" class="animation-link">blog</a></li>
+                        <li><a href="contact.html" class="animation-link">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="row">
+                <div class="uppercase gray-text" style="text-align:right">
+                    replicated by DevTeam &copy;2023. no rights reserved.
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
+                    <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
+                    <li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(window).load(function () {
+        //new WOW().init();
+        // initialize isotope
+        var $container = $('.portfolio_container');
+        $container.isotope({
+            filter: '*',
+        });
+
+        $('.portfolio_filter a').click(function () {
+            $('.portfolio_filter .active').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 500,
+                    animationEngine: "jquery"
+                }
+            });
+            return false;
+        });
+    });
+</script>
