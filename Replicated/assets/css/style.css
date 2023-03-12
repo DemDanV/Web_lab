@@ -33,10 +33,11 @@ a:hover::after{
     width: 50%;
 }
 
-p{
+p {
     font-family: "Open sans", sans-serif;
     color: #999999;
     line-height: 30px;
+    margin: 0 0 10px;
 }
 
 .montserrat-text {
@@ -307,10 +308,10 @@ ul {
     text-align: left;
     margin: 0 auto 30px
 }
-.section-title{
-     width: 50%;
-     text-align:center;
-     margin: 0 auto 100px;
+.section-title {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 100px;
 }
 .services .section-title span {
     margin-bottom: 2.5%;
@@ -442,6 +443,41 @@ ul {
     background-color: rgba(255,255,255,.8);
     transform: translateX(-100%);
     opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.portfolio_item .portfolio_item_hover .item_info {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.portfolio_item .portfolio_item_hover .item_info span {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #60606e;
+    font-size: 18px;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+}
+.portfolio_item .portfolio_item_hover .item_info em {
+    font-style: normal;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #7beec7;
+    padding: 5px;
+    color: white;
+    margin-top: 5px;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
 }
 
 .section-description{
@@ -451,7 +487,7 @@ ul.list li:last-child {
     margin-bottom: 0;
 }
 .applied-skills li{
-    margin-bottom: 10px;
+    line-height: 25px;
     position:relative;
     padding-left: 20px;
 }
@@ -459,6 +495,7 @@ ul.list li:last-child {
 .applied-skills li:before {
     font-family: "Ionicons";
     content: '\f374';
+    font-size: 15px;
     position: absolute;
     bottom: 0;
     top:0;
@@ -482,6 +519,61 @@ ul.list li:last-child {
     background-color: #7beec7;
 }
 
+.section-title p {
+    line-height: 24px;
+    color: #60606e;
+}
+
+.column{
+    margin-bottom: 10px;
+}
+
+.benefits i {
+    border-radius: .1rem;
+    position:relative;
+    top:5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #7beec7;
+    margin-right: 10px;
+}
+
+
+.benefits span {
+    font-size: 16px;
+    display: inline-block;
+    line-height: 50px;
+    top:0;
+    left:0;
+    height: 50px;
+}
+
+.member-info {
+    position: relative;
+    margin-bottom: 30px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.team-members-hover {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,.8);
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.a {
+    color: #60606e;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
 
 
 @media (min-width:768px) {
