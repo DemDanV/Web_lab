@@ -21,7 +21,7 @@ a.link{
     position: relative;
 }
 a.link::after{
-    content: "asdsad";
+    content: "";
     position: absolute;
     bottom: -10px;
 }
@@ -574,6 +574,54 @@ ul.list li:last-child {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+
+.adress p{
+    line-height: 16px;
+}
+
+.input_1{
+    height: 50px;
+    width: 100%;
+    border-style: none;
+}
+
+.input_1 input {
+    border-style: solid;
+}
+.input_1 input, .input_1 textarea {
+    border-color: #7beec7;
+    border-width: 2px;
+}
+
+
+.input_1 span {
+    padding-right: 5px;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999999;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+}
+
+.input_1 [type="text"] {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input_1 textarea {
+    padding-top: 10px;
+    line-height: 24px;
+    min-height: 150px;
+    resize: vertical;
+}
+
 
 
 @media (min-width:768px) {
