@@ -41,9 +41,7 @@
             <div class="big-title uppercase montserrat-text">students</div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
+                tempor incididunt ut labore et dolore magna aliqua.
             </p>
         </li>
     </ul>
@@ -52,7 +50,7 @@
     <div class="developers">
         <div class="col-md-5 col-sm-12">
             <div class="row">
-                <img src="assets/img/programmers.jpg" alt="image">
+                <img class="outline" src="assets/img/programmers.jpg" alt="image">
             </div>
         </div>
         <div class="col-md-offset-1 col-md-6 col-sm-12">
@@ -145,7 +143,7 @@
             </div>
             <div class="col-md-5 col-sm-12 services-right">
                 <div class="row">
-                    <img src="assets/img/structuredTransparent.png" alt="services" style="object-fit: contain; object-fit: cover; width: -webkit-fill-available;" />
+                    <img class="outline" src="assets/img/structuredTransparent.png" alt="services" style="object-fit: contain; object-fit: cover; width: -webkit-fill-available;" />
                 </div>
             </div>
         </div>
@@ -155,8 +153,7 @@
     <div class="container">
         <div class="col-md-6">
             <div class="row">
-                <span class="white-text uppercase montserrat-text">you think we're cool?</span>
-                <span class="white-text uppercase montserrat-text">let's work together</span>
+                <span class="white-text uppercase montserrat-text" style="line-height: 40px; font-size: 30px;">you think we're cool? let's work together</span>
                 <div class="btn white" style="margin: 30px 0 30px;">get in touch</div>
             </div>
         </div>
@@ -168,7 +165,7 @@
                     <form action="#" method="post">
                         <div style="margin-bottom: 20px; padding: 0 10px 0">
                             <div class="input_1">
-                                <input type="text" name="mail" class  style="border-style: dashed; border-width: 2px;border-color: rgb(190, 190, 190) "/>
+                                <input type="text" name="mail" class style="border-style: dashed; border-width: 2px;border-color: rgb(190, 190, 190) " />
                                 <span style="left: 20px;">your mail</span>
                             </div>
                         </div>
@@ -216,3 +213,19 @@
     </div>
 </footer>
 <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(window).load(function () {
+        // initialise flexslider
+        $('.site-hero').flexslider({
+            animation: "fade",
+            directionNav: false,
+            controlNav: false,
+            keyboardNav: true,
+            slideToStart: 0,
+            animationLoop: true,
+            pauseOnHover: false,
+            slideshowSpeed: 4000,
+        });
+    });
+</script>
