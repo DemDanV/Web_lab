@@ -580,7 +580,7 @@ ul.list li:last-child {
 }
 
 .input_1{
-    height: 50px;
+    height: 45px;
     width: 100%;
     border-style: none;
 }
@@ -597,35 +597,67 @@ ul.list li:last-child {
 .input_1 span {
     padding-right: 5px;
     position: absolute;
-    top: 0px;
     left: 5px;
-    transform: translateY(-50%);
+    transform: translateY(-65%);
     text-transform: uppercase;
     font-weight: 700;
     color: #999999;
     font-family: "Montserrat", sans-serif;
     background-color: white;
+    font-size: 12px;
 }
 
 .input_1 [type="text"] {
     height: 100%;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .input_1 textarea {
+    font-size: 18px;
     padding-top: 10px;
     line-height: 24px;
     min-height: 150px;
     resize: vertical;
 }
 
+.green-section {
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #7beec7;
+}
+.btn.white {
+    width: 30%;
+    background-color: #fff;
+    color: #7beec7;
+}
+.white-text{
+    line-height: 40px;
+    font-size: 30px;
+    color: #fff;
+}
+.white-section {
+    padding: 20px;
+    background-color: #fff;
+}
+.white-section h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+.white-section .btn{
+    width: 30%;
+}
+button{
+    border-style: none;
+}
 
 
-@media (min-width:768px) {
-    .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+
+    @media (min-width:768px) {
+        .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
         float: left
     }
 
