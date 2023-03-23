@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/ionicons.min.css">
 </head>
-<header class="main-header">
+<header class="header">
     <div class="container">
         <div class="logo">
             <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
@@ -24,7 +24,7 @@
         </div>
     </div>
 </header>
-<div class="site-hero">
+<section class="site-hero">
     <ul class="slides">
         <li>
             <div><span class="small-title uppercase montserrat-text">we're</span></div>
@@ -45,8 +45,8 @@
             </p>
         </li>
     </ul>
-</div>
-<div class="container">
+</section>
+<section class="container">
     <div class="developers">
         <div class="col-md-5 col-sm-12">
             <div class="row">
@@ -70,8 +70,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="services">
+</section>
+<section class="services">
     <div class="hidebox container">
         <div class="section-title">
             <span>
@@ -148,8 +148,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="green-section">
+</section>
+<section class="green-section">
     <div class="container">
         <div class="col-md-6">
             <div class="row">
@@ -175,10 +175,8 @@
             </div>
         </div>
     </div>
-</div>
-
-
-<footer class="main-footer wow fadeInUp">
+</section>
+<footer class="footer wow fadeInUp">
     <div class="container">
         <div class="col-md-8 col-sm-12">
             <div class="row">
@@ -225,21 +223,21 @@
             slideToStart: 0,
             animationLoop: true,
             pauseOnHover: false,
-            slideshowSpeed: 4000,
+            slideshowSpeed: 3000,
         });
     });
 
     $(document).ready(function () {
         $(".hidebox .row").hide();
-        $(".hidebox").css("background-color", "#29c5e6");
+        $(".hidebox").css("background-color", "#b0e9f5");
     });
     $(".hidebox").click(function () {
         $(".hidebox .row").hide("slow");
-        $(this).css("background-color", "#29c5e6");
+        $(this).css("background-color", "#b0e9f5");
     });
     $(".hidebox").dblclick(function () {
         $(".hidebox .row").show("slow");
-        $(this).css("background-color", "#e7e7e7");
+        $(this).css("background-color", "#ffffff");
     });
 
     $(".increase-on-hover").hover(

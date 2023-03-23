@@ -78,7 +78,7 @@ ul.social-icons li a{
 }
 
 
-.main-header{
+.header{
     height: 100px;
     width: 100%;
     position: absolute;
@@ -86,7 +86,7 @@ ul.social-icons li a{
     left: 0px;
     z-index: 9;
 }
-.main-header .logo {
+.header .logo {
     float: left;
     height: 100px;
     line-height: 100px;
@@ -128,7 +128,7 @@ nav.desktop-nav ul.first-level > li a{
     font-weight: 700;
 }
 
-footer.main-footer{
+footer.footer{
     padding: 50px 0;
 }
 
@@ -154,33 +154,33 @@ footer.main-footer{
     }
 }
 
-footer.main-footer {
+footer.footer {
     padding: 50px 0;
 }
-footer.main-footer nav.footer-nav ul{
+footer.footer nav.footer-nav ul{
     padding: 0;
     margin: 0px;
 }
-footer.main-footer nav.footer-nav ul li {
+footer.footer nav.footer-nav ul li {
     list-style: none;
     float: left;
     margin: 0 20px;
     padding: 0;
 }
-footer.main-footer nav.footer-nav ul li:first-child{margin: 0 20px 0 0;}
-footer.main-footer nav.footer-nav ul li a{
+footer.ooter nav.footer-nav ul li:first-child{margin: 0 20px 0 0;}
+footer.footer nav.footer-nav ul li a{
     text-transform: uppercase;
     color: #9a9a9a;
 }
 @media (max-width: 991px) {
-    footer.main-footer * {
+    footer.footer * {
         text-align: center;
     }
-    footer.main-footer nav.footer-nav ul li {
+    footer.footer nav.footer-nav ul li {
         text-align: center;
         width: 100%;
     }
-    footer.main-footer nav.footer-nav ul li, footer.main-footer nav.footer-nav ul li:first-child {
+    footer.footer nav.footer-nav ul li, footer.footer nav.footer-nav ul li:first-child {
         margin-left: 0;
         margin-bottom: 20px;
     }
@@ -391,12 +391,19 @@ ul {
 }
 
 
+
 .page-title {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    
+}
+.page-title .android-icon{
+    width: 100px;
+    height: 100px;
+    margin-top: -100px;
 }
 .portfolio{
     margin-top: 150px;
@@ -406,6 +413,7 @@ ul {
 }
 .page-title .big-title {
     font-size: 32px;
+    
 }
 .portfolio .big-title {
     font-size: 30px;
@@ -680,9 +688,6 @@ button{
         float: left
     }
 
-    .col-sm-12 {
-        width: 100%
-    }
 
     .col-sm-11 {
         width: 91.66666667%
@@ -1331,7 +1336,5 @@ img {
 			transition:all .2s ease-in-out;
 	position: relative;
 }
-.tab nav a.current{color:#60606e;}
-.tab .tab_single{display: none;}
-.tab .tab_single.shown{display: block;}
+
 
