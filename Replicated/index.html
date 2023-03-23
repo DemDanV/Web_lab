@@ -24,7 +24,7 @@
         </div>
     </div>
 </header>
-<section class="site-hero">
+<section class="main-title">
     <ul class="slides">
         <li>
             <div><span class="small-title uppercase montserrat-text">we're</span></div>
@@ -48,12 +48,12 @@
 </section>
 <section class="container">
     <div class="developers">
-        <div class="col-md-5 col-sm-12">
+        <div class="col-md-5">
             <div class="row">
                 <img class="outline increase-on-hover" src="assets/img/programmers.jpg" alt="image">
             </div>
         </div>
-        <div class="col-md-offset-1 col-md-6 col-sm-12">
+        <div class="col-md-offset-1 col-md-6 ">
             <div class="row">
                 <div class="section-title">
                     <span>history of team</span>
@@ -83,9 +83,9 @@
             </p>
         </div>
         <div class="row">
-            <div class="col-md-7 col-sm-12 services-left" style="padding-top:7.43px">
+            <div class="col-md-7 services-left" style="padding-top:7.43px">
                 <div class="row" style="margin-bottom: 50px">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                         <div class="row">
                             <i class="icon ion-ios-infinite-outline"></i>
                             <span class="montserrat-text  uppercase service-title">unlimited options</span>
@@ -98,7 +98,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                         <div class="row">
                             <i class="icon ion-ios-shuffle"></i>
                             <span class="montserrat-text  uppercase service-title">design & development</span>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                         <div class="row">
                             <i class="icon ion-ios-cart-outline"></i>
                             <span class="montserrat-text  uppercase service-title">e-commerce</span>
@@ -126,7 +126,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6">
                         <div class="row">
                             <i class="icon ion-ios-settings"></i>
                             <span class="montserrat-text  uppercase service-title">customizable design</span>
@@ -141,9 +141,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 col-sm-12 services-right">
+            <div class="col-md-5 services-right">
                 <div class="row">
-                    <img class="outline" src="assets/img/structuredTransparent.png" alt="services" style="object-fit: contain; object-fit: cover; width: -webkit-fill-available;" />
+                    <img class="outline" src="assets/img/structuredTransparent.jpg" alt="services" style="object-fit: contain; object-fit: cover; width: -webkit-fill-available;" />
                 </div>
             </div>
         </div>
@@ -176,9 +176,9 @@
         </div>
     </div>
 </section>
-<footer class="footer wow fadeInUp">
+<footer class="footer">
     <div class="container">
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-8">
             <div class="row">
                 <nav class="footer-nav">
                     <ul>
@@ -193,7 +193,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4">
             <div class="row">
                 <div class="uppercase gray-text" style="text-align:right">
                     replicated by DevTeam &copy;2023. no rights reserved.
@@ -215,7 +215,7 @@
 <script type="text/javascript" charset="utf-8">
     $(window).load(function () {
         // initialise flexslider
-        $('.site-hero').flexslider({
+        $('.main-title').flexslider({
             animation: "fade",
             directionNav: false,
             controlNav: false,
@@ -229,11 +229,11 @@
 
     $(document).ready(function () {
         $(".hidebox .row").hide();
-        $(".hidebox").css("background-color", "#b0e9f5");
+        $(".hidebox").css("background-color", "#7beec7");
     });
     $(".hidebox").click(function () {
         $(".hidebox .row").hide("slow");
-        $(this).css("background-color", "#b0e9f5");
+        $(this).css("background-color", "#7beec7");
     });
     $(".hidebox").dblclick(function () {
         $(".hidebox .row").show("slow");

@@ -73,7 +73,7 @@ ul.social-icons li a{
     padding: 0;
 }
 .btn.green {
-    background-color: #7beec7;
+    background-color: #48b18e;
     color: #fff;
 }
 
@@ -205,7 +205,7 @@ footer.footer nav.footer-nav ul li a{
 ul {
     list-style: none;
 }
-.site-hero{
+.main-title{
     height: 850px;
     width: 100%;
     background: #fff url("../img/site-hero.jpg") no-repeat;
@@ -214,13 +214,13 @@ ul {
     overflow: hidden;
     z-index: -9;
 }
-.site-hero ul.slides{
+.main-title ul.slides{
     height: 400px;
     width: 100%;
     position:absolute;
     top: 100px;
 }
-.site-hero ul.slides li {
+.main-title ul.slides li {
     width: 100%;
     opacity: 1;
     text-align: center;
@@ -231,12 +231,12 @@ ul {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 }
-.site-hero .small-title {
+.main-title .small-title {
     padding: 7px 12px;
     background-color: #7beec7;
     display: inline-block;
 }
-.site-hero .big-title {
+.main-title .big-title {
     font-size: 42px;
     color: #60606e;
     padding: 10px 40px;
@@ -244,7 +244,7 @@ ul {
     display: inline-block;
     margin-bottom: 30px;
 }
-.site-hero p{
+.main-title p{
     width: 50%;
     margin: 0 auto;
 }
@@ -382,7 +382,7 @@ ul {
     margin-left:auto;
 }
 
-.site-hero2 {
+.title-with-photo {
     background: url("../img/site-hero2.jpg") no-repeat;
     background-size: cover;
     height: 500px;
@@ -472,7 +472,7 @@ ul {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    color: #60606e;
+    color: #44444e;
     font-size: 18px;
     -webkit-transform: translateY(20px);
     -ms-transform: translateY(20px);
@@ -482,7 +482,7 @@ ul {
     font-style: normal;
     font-weight: 700;
     display: inline-block;
-    background-color: #7beec7;
+    background-color: #2e9c78;
     padding: 5px;
     color: white;
     margin-top: 5px;
@@ -1097,42 +1097,11 @@ button{
     }
 }
 
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
-}
-
-@media (min-width:768px) {
-    .container {
-        width: 750px
-    }
-}
-
-@media (min-width:992px) {
-    .container {
-        width: 970px
-    }
-}
-
-@media (min-width:1200px) {
-    .container {
-        width: 1170px
-    }
-}
 
 .project-picture .section-title {
     margin-top: 100px;
     text-align:center;
     width: 50%;
-}
-
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
 }
 
 .row {
@@ -1334,4 +1303,9 @@ img {
 	position: relative;
 }
 
+.image-project{
+    width: 180px;
+    opacity: 0.4;
+    margin: 10px;
+}
 
