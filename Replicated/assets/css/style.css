@@ -107,7 +107,7 @@ nav.desktop-nav ul.first-level > li > a{
     line-height: 100px;
     position: relative;
 }
-nav.desktop-nav ul.first-level > li > a::after {
+nav.desktop-nav ul.first-level li a::after {
     content: "";
     position: absolute;
     top: 50px;
@@ -199,7 +199,6 @@ footer.main-footer nav.footer-nav ul li a{
     color: #999999;
 }
 .row {
-    margin-top: 50px;
     margin-right: -15px;
     margin-left: -15px;
 }

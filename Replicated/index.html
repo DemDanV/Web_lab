@@ -50,7 +50,7 @@
     <div class="developers">
         <div class="col-md-5 col-sm-12">
             <div class="row">
-                <img class="outline" src="assets/img/programmers.jpg" alt="image">
+                <img class="outline increase-on-hover" src="assets/img/programmers.jpg" alt="image">
             </div>
         </div>
         <div class="col-md-offset-1 col-md-6 col-sm-12">
@@ -72,7 +72,7 @@
     </div>
 </div>
 <div class="services">
-    <div class="container">
+    <div class="hidebox container">
         <div class="section-title">
             <span>
                 why choose us
@@ -228,4 +228,34 @@
             slideshowSpeed: 4000,
         });
     });
+
+    $(document).ready(function () {
+        $(".hidebox .row").hide();
+        $(".hidebox").css("background-color", "#29c5e6");
+    });
+    $(".hidebox").click(function () {
+        $(".hidebox .row").hide("slow");
+        $(this).css("background-color", "#29c5e6");
+    });
+    $(".hidebox").dblclick(function () {
+        $(".hidebox .row").show("slow");
+        $(this).css("background-color", "#e7e7e7");
+    });
+
+    $(".increase-on-hover").hover(
+        function () {
+            $(this).animate({
+                width: "75%",
+                height: "75%",
+                borderRadius: "2%"
+            }, "slow");
+        }, function () {
+            $(this).animate({
+                width: "100%",
+                height: "100%",
+                borderRadius: "10%"
+            }, "slow");
+        }
+    );
+
 </script>
