@@ -33,36 +33,42 @@
 </section>
 <section class="container" style="margin-top: 100px">
         <div class="col-md-6">
-            <div>
-                <div class="col-md-6">
-                    <div class="input_1" style="margin-bottom: 30px;">
-                        <input type="text" name="name" />
-                        <span class>your name</span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="input_1" style="margin-bottom: 30px;">
-                        <input type="text" name="email" />
-                        <span class>your email</span>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="input_1" style="margin-bottom: 30px;">
-                        <input type="text" name="object" />
-                        <span class>object</span>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="input_1" style="height: fit-content;margin-bottom: 30px;">
-                        <!--<div id = "textarea" contenteditable = "true" data-text = ""></div>-->
-                        <textarea cols="2" rows="12" type="text" name="message"></textarea>
-                        <span class>message</span>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <a href="#" class="btn green" style="float:left; margin-bottom:30px;">send</a>
-                </div>
-            </div>
+            <section>
+						<form id="contactform" onsubmit="validateForm()">
+                                <div>
+                                    <div class="col-md-6">
+                                        <div class="input_1" style="margin-bottom: 30px;">
+                                            <input type="text" id="name" />
+                                            <span >your name</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input_1" style="margin-bottom: 30px;">
+                                            <input type="email" id="email" />
+                                            <span >your email</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input_1" style="margin-bottom: 30px;">
+                                            <input type="text" id="object" />
+                                            <span >object</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input_1" style="height: fit-content;margin-bottom: 30px;">
+                                            <!--<div id = "textarea" contenteditable = "true" data-text = ""></div>-->
+                                            <textarea cols="2" rows="12" type="text" name="message"></textarea>
+                                            <span >message</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <!-- <a href="#" class="btn green" style="float:left; margin-bottom:30px;">send</a> -->
+                                        <input class="btn green" type="submit" value="send">
+                                    </div>
+                                </div>
+						</form>		
+					</section>
+            
             <div>
                 <h3 class="uppercase montserrat-text"  style="margin-bottom: 15px">contact info</h3>
                 <div style="padding-left: 10px;">
@@ -78,14 +84,6 @@
                         <p></p>
                     </div>
                 </div>
-                <ul class="social-icons">
-                    <li  style="margin-left: 0;"><a href="#"><i class="icon ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon ion-social-youtube"></i></a></li>
-                    <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
-                    <li><a href="#"><i class="icon ion-social-instagram"></i></a></li>
-                </ul>
             </div>
         </div>
         <div class="col-md-6">
@@ -131,3 +129,35 @@
         </div>
     </div>
 </footer>
+<script>
+    function alerttt() {
+        alert("Hello");
+}
+    function formSubmit(formelem) {
+        let fname = document.getElementById("name").value;
+        var alerttext = `${fname}, вы отправили запрос!`;
+        alert(alerttext);
+    }
+    function validateForm(){
+    var validation = true;
+    validation &= validateAllForm();
+    if(validation == false){
+
+    }
+    else {
+        validation &= formSubmit();
+    }
+    return validation;
+}
+
+    function validateAllForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("name").value;
+    var object = document.getElementById("name").value;
+    var message = document.getElementById("name").value;
+    if ((name == null || name == "") && (email == null || email == "") && (object == null || object == "") && (message == null || message == "")) {
+        alert("Please Fill In All Required Fields");
+        return false;
+    }
+    }
+</script>

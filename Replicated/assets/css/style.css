@@ -75,6 +75,9 @@ ul.social-icons li a{
 .btn.green {
     background-color: #48b18e;
     color: #fff;
+    margin-bottom: 20px;
+    width: 200px;
+    margin-top: -15px;
 }
 
 
@@ -590,6 +593,7 @@ ul.list li:last-child {
 .input_1{
     height: 45px;
     width: 100%;
+    min-height: 45px;
     border-style: none;
 }
 
@@ -616,6 +620,13 @@ ul.list li:last-child {
 }
 
 .input_1 [type="text"] {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.input_1 [type="email"] {
     height: 100%;
     width: 100%;
     font-size: 16px;
