@@ -53,7 +53,7 @@ p {
 
 ul.social-icons li{
     list-style: none;
-    float: left;
+    float: right;
     margin: 0 10px;
 }
 ul.social-icons li a{
@@ -85,8 +85,6 @@ ul.social-icons li a{
     height: 100px;
     width: 100%;
     position: absolute;
-    top: 0px;
-    left: 0px;
     z-index: 9;
 }
 .header .logo {
@@ -97,29 +95,18 @@ ul.social-icons li a{
 
 .menu{float: right;}
 
-nav.desktop-nav {float: left}
-nav.desktop-nav li {list-style: none}
+
 nav.desktop-nav ul.first-level > li{
     float: left;
     margin-right: 20px;
     position: relative;
 }
-nav.desktop-nav ul.first-level > li:last-child{margin-right: 0}
 nav.desktop-nav ul.first-level > li > a{
     display: inline-block;
     line-height: 100px;
     position: relative;
 }
-nav.desktop-nav ul.first-level li a::after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    width: 50%;
-    height: 1px;
-    background-color: #60606e;
-    opacity: 0;
-}
+    
 nav.desktop-nav ul.first-level > li:hover > a::after{
     top: 35px;
     opacity: 1;
@@ -136,26 +123,14 @@ footer.footer{
 }
 
 .container {
+    width: 1170px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto
 }
-@media (min-width:768px) {
-    .container {
-        width: 750px
-    }
-}
-@media (min-width:992px) {
-    .container {
-        width: 970px
-    }
-}
-@media (min-width:1200px) {
-    .container {
-        width: 1170px
-    }
-}
+
+
 
 footer.footer {
     padding: 50px 0;
@@ -253,35 +228,20 @@ ul {
 }
 
 .developers {
-    position: relative;
+    display:inline-flex;
     width: 100%;
     height: 105%;
     float: left;
     margin-top: -300px;
 }
-@media (max-width: 992px) {
-    .developers img {
-        display: none;
-    }
-}
+
 
 .developers img {
     float: left;
     max-height: 400px;
     margin: 0 10px 10px 0;
 }
-@media (max-width: 991px) {
-    .developers{
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-@media (max-width: 991px) {
-    .developers .section-title span{
-        margin: 0 auto;
-        text-align: center;
-    }
-}
+
 
 
 
@@ -327,6 +287,7 @@ ul {
 }
 .services .services-left .service-title {
     margin-bottom: 20px;
+    padding-right: 130px;
     font-size: 18px;
     display: inline-block;
 }
@@ -338,38 +299,15 @@ ul {
     display: block;
     margin-bottom: 10px;
 }
-
-@media (max-width:992px) {
-    .services {
-        text-align: center;
-    }
-    .services img
-    {
-        display: none;
-    }
+.services-photo-companies{
+    display: inline-flex;
 }
-
-@media (min-width:1200px) {
-    .services {
-        text-align: left;
-        display: block;
-    }
+.services-photo {
+    width: 50%;
 }
-
-@media (max-width:992px) {
-    .developers {
-        text-align: center;
-    }
-    .developers span{
-        text-align: center;
-    }
+.services-text{
+    display: inline-flex;
 }
-@media (min-width:1200px) {
-    .developers {
-        text-align: left;
-    }
-}
-
 .blur {
     backdrop-filter: blur(6px);
 }
@@ -392,8 +330,15 @@ ul {
     width: 100%;
     position: relative;
 }
+.developers-title-text{
+    margin-left: 20px;
+}
 
-
+.developers-photo{
+    min-width: 500px;
+    padding-right: 30px;
+    object-fit: cover;
+}
 
 .page-title {
     position: absolute;
@@ -648,6 +593,12 @@ ul.list li:last-child {
     padding-bottom: 50px;
     background-color: #7beec7;
 }
+.green-section-text{
+    max-width: 350px;
+    margin-left: 30px;
+    float: left;
+}
+
 .btn.white {
     width: 30%;
     background-color: #fff;
@@ -657,8 +608,11 @@ ul.list li:last-child {
     color: #fff;
 }
 .white-section {
+    max-width: 600px;
+    float: right;
     padding: 20px;
     background-color: #fff;
+    margin-right: 30px;
 }
 .white-section h2 {
     font-size: 24px;
@@ -1115,11 +1069,6 @@ button{
     width: 50%;
 }
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px
-}
-
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
     position: relative;
     min-height: 1px;
@@ -1279,11 +1228,6 @@ img {
 	margin-top: 10px;
 }
 
-/*tab menu*/
-.tab{
-	overflow: hidden;
-	float: left;
-}
 .tab nav{
 	width: 100%;
 	display: inline-block;
