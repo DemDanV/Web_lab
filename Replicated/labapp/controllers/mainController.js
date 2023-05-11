@@ -5,7 +5,7 @@ exports.navmenu = [
     },
     {
         name: 'ABOUT US',
-        addr: '#'
+        addr: '/about'
     },
     {
         name: 'SERVICES',

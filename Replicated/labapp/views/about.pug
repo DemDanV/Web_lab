@@ -1,0 +1,152 @@
+extends layout
+
+block content
+  section.title-with-photo
+    .page-title
+      div
+        span.big-title.uppercase.montserrat-text about us
+      .small-title.uppercase.montserrat-text Home / About us
+  section.container(style='margin-top: 100px;')
+    .row
+      .col-md-6
+        .section-title(style='width: 100%; text-align:left; margin-bottom: 0;')
+          span about us
+          p.uppercase.montserrat-text we are awesome
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .col-md-6
+        .section-title(style='width: 100%; text-align: left; margin-bottom: 0;')
+          span what we do
+          p.uppercase.montserrat-text creative &amp; digital
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .row(style='margin-top: 150px;')
+      .section-title
+        span some benefits
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .row.benefits
+      .column.col-md-4.col-sm-12
+        i.icon.ion-iphone
+        span.uppercase.montserrat-text fully responsive
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      .column.col-md-4.col-sm-12
+        i.icon.ion-ios-infinite-outline
+        span.uppercase.montserrat-text unlimited options
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      .column.col-md-4.col-sm-12
+        i.icon.ion-social-wordpress-outline
+        span.uppercase.montserrat-text wordpress
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      .column.col-md-4.col-sm-12
+        i.icon.ion-ios-cart-outline
+        span.uppercase.montserrat-text e-commerce
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      .column.col-md-4.col-sm-12
+        i.icon.ion-ios-settings
+        span.uppercase.montserrat-text customizable design
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      .column.col-md-4.col-sm-12
+        i.icon.ion-settings
+        span.uppercase.montserrat-text support
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+  section.container(style='margin-top: 100px;')
+    .row
+      .section-title
+        span the dream team
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .row.team-members
+      .col-md-6
+        img(src='assets/img/Dany.jpg' alt='Dany the programmer' style='margin-bottom: 20px; border: 2px solid #7beec7;')
+        .team-info.uppercase.montserrat-text
+          h2 Dany De Rico
+          h3.white-text our teamlead
+          p founder of the company
+      .col-md-6
+        img(src='assets/img/Aza.jpg' alt='Aza the programmer' style='margin-bottom: 20px; border: 2px solid #7beec7;')
+        .team-info.uppercase.montserrat-text
+          h2 Aza Mi Los
+          h3.white-text our best man
+          p hard working programmer
+  section.green-section
+    .container
+      .col-md-6
+        .row
+          span.white-text.uppercase.montserrat-text(style='line-height: 40px; font-size: 30px;') you think we&apos;re cool? let&apos;s work together
+          .btn.white(style='margin: 30px 0 30px;') get in touch
+      .col-md-6
+        .row
+          .white-section
+            h2.uppercase.montserrat-text stay informed with our newsletter
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            form(action='#' method='post')
+              div(style='margin-bottom: 20px; padding: 0 10px 0')
+                .input_1
+                  input(type='text' name='mail' style='border-style: dashed; border-width: 2px;border-color: rgb(190, 190, 190) ')
+                  span(style='left: 20px;') your mail
+              button.btn.green(type='submit') send
+  script(type='text/javascript' src='assets/js/jquery-2.1.4.min.js')
+  script(type='text/javascript' src='assets/js/isotope.pkgd.min.js')
+  script(type='text/javascript' charset='utf-8').
+    $(window).load(function () {
+    //new WOW().init();
+    // initialize isotope
+    var $container = $('.portfolio_container');
+    $container.isotope({
+    filter: '*',
+    });
+    $('.portfolio_filter a').click(function () {
+    $('.portfolio_filter .active').removeClass('active');
+    $(this).addClass('active');
+    var selector = $(this).attr('data-filter');
+    $container.isotope({
+    filter: selector,
+    animationOptions: {
+    duration: 500,
+    animationEngine: "jquery"
+    }
+    });
+    return false;
+    });
+    $(document).ready(function () {
+    // Получаем элемент <nav> и сохраняем его в переменную navmenu
+    var navmenu = document.getElementsByClassName("first-level")[0];
+    // Получаем все элементы <li> внутри элемента <nav> и сохраняем их в переменную navlist
+    var navlist = navmenu.getElementsByTagName("li");
+    // Получаем значение id элемента <main> и сохраняем его в переменную main_id
+    var main_id = location.pathname.split('/')[7].split('.')[0];
+    //alert(location.pathname.split('/')[7].split('.')[0]);
+    // Создаем переменную menuelem, в которую будет сохранен элемент <li>, который будет активным на текущей странице
+    var menuelem;
+    switch (main_id) {
+    case "index":
+    menuelem = navlist[0];
+    break;
+    case "about":
+    menuelem = navlist[1];
+    break;
+    case "unity":
+    menuelem = navlist[2];
+    break;
+    case "android":
+    menuelem = navlist[3];
+    break;
+    case "blog":
+    menuelem = navlist[4];
+    break;
+    case "contact":
+    menuelem = navlist[5];
+    break;
+    }
+    // Добавляем класс "active" к элементу, сохраненному в переменной menuelem, чтобы он был подсвечен на странице
+    menuelem.classList.add("active");
+    });
+    });

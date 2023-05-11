@@ -43,3 +43,55 @@
 //- <script type="text/javascript" src="/javascripts/topmenu.js"></script>
 //- <script type="text/javascript" src="/javascripts/jqfunc.js"></script>
 //- 		</body>
+doctype html
+head
+  // <link rel="icon" href="assets/img/favicon.ico" type="icon/x-icon" />
+  title Home page
+  link(rel='stylesheet' href='../stylesheets/styles.css')
+  link(rel='icon' href='../stylesheets/ionicons.min.css')
+  //- link(rel='stylesheet' href='assets/css/ionicons.min.css')
+header.header
+  .container
+    .logo
+      a(href='index.html')
+        img(src='assets/img/logo.png' alt='logo')
+    .menu
+      nav.desktop-nav
+        ul.first-level
+          li
+            a.animation-link(href='index.html') Home
+          li
+            a.animation-link(href='about.html') about us
+          li
+            a.animation-link(href='unity.html') unity
+          li
+            a.animation-link(href='android.html') android
+          li
+            a.animation-link(href='blog.html') blog
+          li
+            a.animation-link(href='contact.html') contact
+main.main
+    block content
+footer.footer
+  .container
+    .uppercase.gray-text(style='text-align:right')
+      | replicated by DevTeam &copy;2023. no rights reserved.
+    ul.social-icons
+      li
+        a(href='#')
+          i.icon.ion-social-facebook
+      li
+        a(href='#')
+          i.icon.ion-social-youtube
+      li
+        a(href='#')
+          i.icon.ion-social-twitter
+      li
+        a(href='#')
+          i.icon.ion-social-linkedin
+      li
+        a(href='#')
+          i.icon.ion-social-pinterest
+      li
+        a(href='#')
+          i.icon.ion-social-instagram
