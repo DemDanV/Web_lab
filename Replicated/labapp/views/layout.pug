@@ -58,18 +58,20 @@ header.header
     .menu
       nav.desktop-nav
         ul.first-level
-          li
-            a.animation-link(href='index.html') Home
-          li
-            a.animation-link(href='about.html') about us
-          li
-            a.animation-link(href='unity.html') unity
-          li
-            a.animation-link(href='android.html') android
-          li
-            a.animation-link(href='blog.html') blog
-          li
-            a.animation-link(href='contact.html') contact
+            each item in navmenu
+                <li><a href="#{item.addr}">#{item.name}</a></li>
+            //- li
+            //-     a.animation-link(href='index.html') Home
+            //- li
+            //-     a.animation-link(href='about.html') about us
+            //- li
+            //-     a.animation-link(href='unity.html') unity
+            //- li
+            //-     a.animation-link(href='android.html') android
+            //- li
+            //-     a.animation-link(href='blog.html') blog
+            //- li
+            //-     a.animation-link(href='contact.html') contact
 main.main
     block content
 footer.footer

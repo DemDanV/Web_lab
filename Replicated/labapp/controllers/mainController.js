@@ -8,15 +8,15 @@ exports.navmenu = [
         addr: '/about'
     },
     {
-        name: 'SERVICES',
+        name: 'UNITY',
         addr: '#'
     },
     {
-        name: 'PROJECTS',
+        name: 'ANDROID',
         addr: '#'
     },
     {
-        name: 'MEMBERS',
+        name: 'BLOG',
         addr: '#'
     },
     {
