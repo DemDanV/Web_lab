@@ -5,18 +5,18 @@ exports.navmenu = [
     },
     {
         name: 'ABOUT US',
+        addr: '/about'
+    },
+    {
+        name: 'UNITY',
         addr: '#'
     },
     {
-        name: 'SERVICES',
+        name: 'ANDROID',
         addr: '#'
     },
     {
-        name: 'PROJECTS',
-        addr: '#'
-    },
-    {
-        name: 'MEMBERS',
+        name: 'BLOG',
         addr: '#'
     },
     {
