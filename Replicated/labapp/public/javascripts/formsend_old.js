@@ -2,19 +2,18 @@
 Реализация AJAX с помощью XMLHttpRequest. Универсальный метод подходящий для всех версий браузеров, в т.ч. и устаревших
 */
 var sendbtn = document.getElementById("sendbtn");    // выбираем DOM-елемент (кнопку)
-
+console.log(sendbtn)
 // Привязываем к элементу обработчик события "click"
 sendbtn.addEventListener("click", function (e) {
     /* Инструкция preventDefault позволяет переопределить стандартное поведение браузера,
     если ее убрать, то браузер по-умолчанию обновит страницу после отправки данных формы */
     e.preventDefault();
     // Получаем данные полей формы
-    let fname = document.getElementsByName("fname")[0].value;
-    let lname = document.getElementsByName("lname")[0].value;
-    let reqtype = document.getElementsByName("reqtype")[0].value
-    let reqtext = document.getElementsByName("reqtext")[0].value
+    let fname = document.getElementsByName("name")[0].value;
+    let lname = document.getElementsByName("email")[0].value;
+    let reqtype = document.getElementsByName("object")[0].value
     // Преобразуем полученные данные в JSON
-    let formdata = JSON.stringify({ firstname: fname, lastname: lname, reqtype: reqtype, reqtext: reqtext});
+    let formdata = JSON.stringify({ firstname: fname, lastname: lname, reqtype: reqtype});
     
     /* XMLHttpRequest предоставляет простой способ получения данных по ссылке без перезагрузки страницы.
     Это позволяет обновлять только часть веб-страницы не прерывая пользователя.

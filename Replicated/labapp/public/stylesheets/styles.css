@@ -1297,3 +1297,26 @@ img {
 .input_1{
     position: relative;
 }
+
+.status{
+    padding: 30px;
+    margin: 30px;
+    border-radius: 30px;
+    background-color: #dfdfdf;
+}
+.status p{
+    font-size: 20px;
+}
+#sendbtn{
+    height: 50px;
+    line-height: 50px;
+    min-width: 150px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    background-color: #48b18e;
+    color: #fff;
+    width: 200px;
+}

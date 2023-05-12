@@ -41,25 +41,3 @@ function formSubmit(formelem) {
     var alerttext = `${fname}, вы отправили запрос!`;
     alert(alerttext);
 }
-
-function validateForm() {
-    var validation = true;
-    validation &= validateAllForm();
-    if (validation == false) {
-        // Действия при невалидной форме
-    } else {
-        validation &= formSubmit();
-    }
-    return validation;
-}
-
-function validateAllForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("name").value;
-    var object = document.getElementById("name").value;
-    var message = document.getElementById("name").value;
-    if ((name == null || name == "") && (email == null || email == "") && (object == null || object == "") && (message == null || message == "")) {
-        alert("Please Fill In All Required Fields");
-        return false;
-    }
-}
