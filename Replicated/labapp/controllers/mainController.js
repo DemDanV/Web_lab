@@ -85,32 +85,32 @@ exports.get_contact_req_by_firstname = function(req, res) {
   
 // Создать новый запрос.
 exports.create_contact_req = function(req, res) {
-    // Проверяем полученные данные на наличие обязательных полей (firstname и reqtext)
+    // Проверяем полученные данные на наличие обязательных полей (firstname и reqMessage)
 	console.log("Enter Post");
 	
 	//firstname
 	//lastname
 	//email	
-	//reqtext	
-	//privacypol
+	//reqMessage	
+	//reqObject
 	console.log(req.body.firstname);
 	console.log(req.body.lastname);
 	console.log(req.body.email);
-	console.log(req.body.reqtext);
-	console.log(req.body.privacypol);
+	console.log(req.body.reqMessage);
+	console.log(req.body.reqObject);
 
 
-    if (!req.body.firstname || !req.body.reqtext) {
+    if (!req.body.firstname || !req.body.reqMessage) {
             res.status(400).json({ message: "Data validation error!" });    // если данные не найдены, возвращаем HTTP-код 400
         return;
     }
     // Записываем объект в БД
     var curDateTime = new Date(Date.now());
     dbcontext.query(
-        'INSERT INTO contactrequests (`firstname`,`lastname`,`email`,`reqtext`,`agreeprivpol`,`createdAt`,`updatedAt`) VALUES (:firstname, :lastname, :email, :reqtext, :agreeprivpol, :createdAt, :updatedAt)',
+        'INSERT INTO contactrequests (`firstname`,`lastname`,`email`,`reqMessage`,`reqObject`,`createdAt`,`updatedAt`) VALUES (:firstname, :lastname, :email, :reqMessage, :reqObject, :createdAt, :updatedAt)',
         {
             replacements: { firstname: req.body.firstname, lastname: req.body.lastname, email: req.body.email, 
-                reqtext: req.body.reqtext, agreeprivpol: req.body.privacypol, createdAt: curDateTime.toISOString(), updatedAt: curDateTime.toISOString() },
+                reqMessage: req.body.reqMessage, reqObject: req.body.reqObject, createdAt: curDateTime.toISOString(), updatedAt: curDateTime.toISOString() },
             type: dbcontext.QueryTypes.INSERT
         }
     )
@@ -141,17 +141,17 @@ exports.delete_contact_req_by_id = function(req, res) {
   
 // Обновить текст запроса по id в таблице
 exports.update_contact_req_by_id = function(req, res) {
-    // Проверяем полученные данные на наличие обязательного поля reqtext
-    if (!req.body.reqtext) {
+    // Проверяем полученные данные на наличие обязательного поля reqMessage
+    if (!req.body.reqMessage) {
         res.status(400).json({ message: "Data validation error!" });
     return;
     }
     var curDateTime = new Date(Date.now());
     // Обновляем запись в БД
     dbcontext.query(
-        'UPDATE contactrequests SET reqtext = :reqtext, updatedAt = :updatedAt WHERE id = :id',
+        'UPDATE contactrequests SET reqMessage = :reqMessage, updatedAt = :updatedAt WHERE id = :id',
         {
-            replacements: { id: req.params.id, reqtext: req.body.reqtext, updatedAt: curDateTime.toISOString() },
+            replacements: { id: req.params.id, reqMessage: req.body.reqMessage, updatedAt: curDateTime.toISOString() },
             type: dbcontext.QueryTypes.UPDATE
         }
     )
