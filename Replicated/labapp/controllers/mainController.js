@@ -45,10 +45,22 @@ exports.get_contact_req_by_id = function(req, res) {
     });
 };
 // Показать список всех запросов.
+exports.get_contact_req_all = function(req, res) {
+    dbcontext.query(
+        'SELECT * FROM contactrequests', { type: dbcontext.QueryTypes.SELECT }
+    )
+    .then(data => {
+      res.json(data[0]);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || "Some error occurred on the server."
+      });
+    });
+};
+  
 
 
-
-const { dbcontext } = require('../sequelize');
 
 	
 
