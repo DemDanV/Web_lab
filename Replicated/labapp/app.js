@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var usersRouter = require('./routes/contact');
 var unityRouter = require('./routes/unity');
+var blogRouter = require('./routes/blog');
 var androidRouter = require('./routes/android');
 
 
@@ -27,7 +28,10 @@ app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/unity', unityRouter);
 app.use('/android', androidRouter);
+app.use('/blog', blogRouter);
 app.use('/contact', usersRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

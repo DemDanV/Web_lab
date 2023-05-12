@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  section.title-with-photo
+  .page-title
+    div
+      span.big-title.uppercase.montserrat-text blog posts
+    .small-title.uppercase.montserrat-text Home / Blog
+  section
+    .container
+      .row(style='margin-top: 50px;')
+        .col-md-9
+          // blog post 1
+          .blog_post
+            .title_post Why am i wanting sleep?
+            .post_media
+              img(src='img/post_1.jpg' alt='post image')
+            .post_info
+              .post_date.montserrat-text.uppercase march 10, 2023
+              i.icon.ion-chatbox-working
+              span 10
+              i.icon.ion-ios-heart
+              span 15
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            a.link.montserrat-text.uppercase(href='single-post.html')
+              | continue reading 
+              i.icon.ion-arrow-right-c
+          // blog post 2
+          .blog_post
+            .title_post The one story that will change
+            .post_media
+              img(src='img/post_2.jpg' alt='post image')
+            .post_info
+              .post_date.montserrat-text.uppercase febryary 28, 2023
+              i.icon.ion-chatbox-working
+              span 8
+              i.icon.ion-ios-heart
+              span 15
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            a.link.montserrat-text.uppercase(href='single-post.html')
+              | continue reading 
+              i.icon.ion-arrow-right-c
+        // end col
+        aside.col-md-3
+          .input_2
+            input(type='text' placeholder='search...')
+            button(type='submit')
+              i.icon.ion-search
+      // end row
+    // end container
