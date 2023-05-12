@@ -36,4 +36,20 @@ sendbtn.addEventListener("click", function (e) {
 
     // После привязки обработчика событий к запросу отправляем данные
     request.send(formdata);
+
+    
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState == 4 && xhr.status == 200) {
+			var response = xhr.responseText;
+			var answer = document.querySelector('.toAdd');
+			answer.textContent += document.getElementById('name').value + ", ваш запрос получен!\n";
+        }
+    }
+    xhr.open("POST", "/contact", true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    var formData = new FormData();
+    formData.append('name', document.getElementById('name').value);
+    formData.append('email', document.getElementById('email').value);
+    xhr.send(formData);
 });
