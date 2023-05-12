@@ -22,7 +22,7 @@ block content
   section.container
     .developers
       .developers-photo
-        img.outline.increase-on-hover(src='assets/img/programmers.jpg' alt='image')
+        img.outline.increase-on-hover(src='img/programmers.jpg' alt='image')
       .developers-title-text
         .section-title
           span history of team
@@ -34,57 +34,6 @@ block content
           | consequat. in reprehenderit in voluptate velit esse
           | cillum dolore eu fugiat nulla pariatur.
         a.btn.green(href='#' style='float:right; margin-top:30px;') read more
-  section.services
-    .hidebox.container(style='background-color: rgb(123, 238, 199);')
-      .section-title
-        span
-          | why choose us
-        p(style='text-align: center')
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          | incididunt ut labore et dolore magna aliqua.
-      .hidable
-        .services-left(style='padding-top:7.43px')
-          div(style='margin-bottom: 50px;')
-            .services-qualities
-              i.icon.ion-ios-infinite-outline
-              span.montserrat-text.uppercase.service-title unlimited options
-              ul
-                li branding
-                li design &amp; copywriting
-                li concept development
-                li user expirience
-                li cuality
-            .services-qualities
-              i.icon.ion-ios-shuffle
-              span.montserrat-text.uppercase.service-title design &amp; development
-              ul
-                li branding
-                li design &amp; copywriting
-                li concept development
-                li user expirience
-                li cuality
-          div
-            .services-qualities
-              i.icon.ion-ios-cart-outline
-              span.montserrat-text.uppercase.service-title e-commerce
-              ul
-                li branding
-                li design &amp; copywriting
-                li concept development
-                li user expirience
-                li cuality
-            .services-qualities
-              i.icon.ion-ios-settings
-              span.montserrat-text.uppercase.service-title customizable design
-              ul
-                li branding
-                li design &amp; copywriting
-                li concept development
-                li user expirience
-                li cuality
-        .services-right
-          div
-            img.outline(src='assets/img/structuredTransparent.jpg' alt='services' style='object-fit: contain; object-fit: cover; width: -webkit-fill-available;')
   section.green-section
     .container
       .green-section-text
@@ -99,79 +48,7 @@ block content
               input(type='text' name='mail' style='border-style: dashed; border-width: 2px;border-color: rgb(190, 190, 190) ')
               span your mail
           button.btn.green(type='submit') send
-  script(type='text/javascript' src='assets/js/jquery-2.1.4.min.js')
-  script(type='text/javascript' src='assets/js/jquery.flexslider.js')
-  script(type='text/javascript' charset='utf-8').
-    $(window).load(function () {
-    // initialise flexslider
-    $('.main-title').flexslider({
-    animation: "fade",
-    directionNav: false,
-    controlNav: false,
-    keyboardNav: true,
-    slideToStart: 0,
-    animationLoop: true,
-    pauseOnHover: false,
-    slideshowSpeed: 3000,
-    });
-    });
-    $(document).ready(function () {
-    // �������� ������� <nav> � ��������� ��� � ���������� navmenu
-    var navmenu = document.getElementsByClassName("first-level")[0];
-    // �������� ��� �������� <li> ������ �������� <nav> � ��������� �� � ���������� navlist
-    var navlist = navmenu.getElementsByTagName("li");
-    // �������� �������� id �������� <main> � ��������� ��� � ���������� main_id
-    var main_id = location.pathname.split('/')[7].split('.')[0];
-    //alert(location.pathname.split('/')[7].split('.')[0]);
-    // ������� ���������� menuelem, � ������� ����� �������� ������� <li>, ������� ����� �������� �� ������� ��������
-    var menuelem;
-    switch (main_id) {
-    case "index":
-    menuelem = navlist[0];
-    break;
-    case "about":
-    menuelem = navlist[1];
-    break;
-    case "unity":
-    menuelem = navlist[2];
-    break;
-    case "android":
-    menuelem = navlist[3];
-    break;
-    case "blog":
-    menuelem = navlist[4];
-    break;
-    case "contact":
-    menuelem = navlist[5];
-    break;
-    }
-    // ��������� ����� "active" � ��������, ������������ � ���������� menuelem, ����� �� ��� ��������� �� ��������
-    menuelem.classList.add("active");
-    });
-    $(document).ready(function () {
-    $(".hidebox .hidable").hide();
-    $(".hidebox").css("background-color", "#7beec7");
-    });
-    $(".hidebox").click(function () {
-    $(".hidebox .hidable").hide("slow");
-    $(this).css("background-color", "#7beec7");
-    });
-    $(".hidebox").dblclick(function () {
-    $(".hidebox .hidable").show("slow");
-    $(this).css("background-color", "#ffffff");
-    });
-    $(".increase-on-hover").hover(
-    function () {
-    $(this).animate({
-    width: "75%",
-    height: "75%",
-    borderRadius: "2%"
-    }, "slow");
-    }, function () {
-    $(this).animate({
-    width: "100%",
-    height: "100%",
-    borderRadius: "10%"
-    }, "slow");
-    }
-    );
+  script(type='text/javascript' src='javascripts/jquery-2.1.4.min.js')
+  script(type='text/javascript' src='javascripts/jquery.flexslider.js')
+  script(src="javascripts/index.js" type="text/javascript" charset="utf-8")
+
