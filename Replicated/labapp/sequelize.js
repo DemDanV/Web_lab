@@ -2,7 +2,7 @@ const Sequelize = require('sequelize'); // подключаем пакет sequa
 // Подключение к БД SQLite
 const dbcontext = new Sequelize({ 
 	dialect: "sqlite", 
-	storage: "public/dataBases/database.sqlite"
+	storage: "dataBases/appqb.sqlite"
 }); 
 // Экспорт подключения к БД для использования в других модулях
 module.exports = { 

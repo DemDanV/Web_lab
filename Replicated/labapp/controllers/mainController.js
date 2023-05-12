@@ -44,27 +44,9 @@ exports.get_contact_req_by_id = function(req, res) {
     res.status(500).json({ message: err.message });
     });
 };
+
+
 // Показать список всех запросов.
-exports.get_contact_req_all = function(req, res) {
-    dbcontext.query(
-        'SELECT * FROM contactrequests', { type: dbcontext.QueryTypes.SELECT }
-    )
-    .then(data => {
-      res.json(data[0]);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message: err.message || "Some error occurred on the server."
-      });
-    });
-};
-  
-
-
-
-	
-
-
 exports.get_contact_req_all = function(req, res) {
     dbcontext.query(
 		'SELECT * FROM contactrequests', { type: dbcontext.QueryTypes.SELECT }

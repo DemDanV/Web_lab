@@ -31,12 +31,12 @@ block content
                     .col-md-12
                         .input_1(style='height: fit-content;margin-bottom: 30px;')
                             // <div id = "textarea" contenteditable = "true" data-text = ""></div>
-                            textarea(cols='2' rows='12' type='text' name='message')
+                            textarea(cols='2' rows='12' type='text' id='message' name='message')
                             span message
                     .col-md-12
                         //- // <a href="#"  id="sendbtn" class="btn green" style="float:left; margin-bottom:30px;">send</a>
                         //- input.btn.green(type='submit' value='send')
-                        <p class="btn green"><input type="submit" id="sendbtn" value="Отправить"></p>
+                        <p class="btn green" onclick="sendContactInfo(event)"><input type="submit" id="sendbtn" value="Отправить" ></p>
             div
                 h3.uppercase.montserrat-text(style='margin-bottom: 15px') contact info
                 div(style='padding-left: 10px;')
