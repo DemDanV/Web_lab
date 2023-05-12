@@ -46,7 +46,7 @@ sendbtn.addEventListener("click", function (e) {
 			answer.textContent += document.getElementById('name').value + ", ваш запрос получен!\n";
         }
     }
-    xhr.open("POST", "/contact", true);
+    xhr.open("POST", "contact/ajaxrequest", true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     var formData = new FormData();
     formData.append('name', document.getElementById('name').value);
