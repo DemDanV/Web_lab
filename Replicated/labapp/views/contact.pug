@@ -2,53 +2,53 @@ extends layout
 
 block content
     section.title-with-photo
-    .page-title
-        div
-        span.big-title.uppercase.montserrat-text contact us
-        .small-title.uppercase.montserrat-text Home / Contact us
+        .page-title
+            div
+                span.big-title.uppercase.montserrat-text contact us
+                .small-title.uppercase.montserrat-text Home / Contact us
     section.container(style='margin-top: 100px')
-    .col-md-6
-        section
-        form#contactform(onsubmit='validateForm()')
+        .col-md-6
+            section
+                form#contactform(onsubmit='validateForm()')
+                    div
+                    .col-md-6
+                        .input_1(style='margin-bottom: 30px;')
+                            input#name(type='text')
+                            span your name
+                    .col-md-6
+                        .input_1(style='margin-bottom: 30px;')
+                            input#email(type='email')
+                            span your email
+                    .col-md-12
+                        .input_1(style='margin-bottom: 30px;')
+                            input#object(type='text')
+                            span object
+                    .col-md-12
+                        .input_1(style='height: fit-content;margin-bottom: 30px;')
+                            // <div id = "textarea" contenteditable = "true" data-text = ""></div>
+                            textarea(cols='2' rows='12' type='text' name='message')
+                            span message
+                    .col-md-12
+                        // <a href="#" class="btn green" style="float:left; margin-bottom:30px;">send</a>
+                        input.btn.green(type='submit' value='send')
             div
-            .col-md-6
-                .input_1(style='margin-bottom: 30px;')
-                input#name(type='text')
-                span your name
-            .col-md-6
-                .input_1(style='margin-bottom: 30px;')
-                input#email(type='email')
-                span your email
-            .col-md-12
-                .input_1(style='margin-bottom: 30px;')
-                input#object(type='text')
-                span object
-            .col-md-12
-                .input_1(style='height: fit-content;margin-bottom: 30px;')
-                // <div id = "textarea" contenteditable = "true" data-text = ""></div>
-                textarea(cols='2' rows='12' type='text' name='message')
-                span message
-            .col-md-12
-                // <a href="#" class="btn green" style="float:left; margin-bottom:30px;">send</a>
-                input.btn.green(type='submit' value='send')
-        div
-        h3.uppercase.montserrat-text(style='margin-bottom: 15px') contact info
-        div(style='padding-left: 10px;')
-            p
-            | Lorem ipsum dolor sit amet, conse adipisicing elit. Libero incidunt quod ab mollitia quia dolorum conse.
-            .adress
-            p 13D, Functional apartment, Unique colony,
-            p Agadir 86360
-            p +212 124-566-780
-            p +212 124-566-780
-            div
-            a.link(href='mailto:email@website.com') email@website.com
-            p
-    .col-md-6
-        div(style='height: 846px; overflow: hidden;')
-        #map(style='height:100%;')
-            // <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23602386.549036242!2d34.96459006514799!3d53.846806194484834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93a5c7af6ab2f%3A0x31b7c3f443e026fb!2z0KPQk9CQ0KLQow!5e0!3m2!1sru!2sru!4v1678709138135!5m2!1sru!2sru" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.1301086456565!2d55.936295182963526!3d54.724926212432365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93a5c7af6ab2f%3A0x31b7c3f443e026fb!2z0KPQk9CQ0KLQow!5e0!3m2!1sru!2sru!4v1678896688940!5m2!1sru!2sru' style='width:100%; height:100%; border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
-                
+                h3.uppercase.montserrat-text(style='margin-bottom: 15px') contact info
+                div(style='padding-left: 10px;')
+                    p
+                    | Lorem ipsum dolor sit amet, conse adipisicing elit. Libero incidunt quod ab mollitia quia dolorum conse.
+                    .adress
+                    p 13D, Functional apartment, Unique colony,
+                    p Agadir 86360
+                    p +212 124-566-780
+                    p +212 124-566-780
+                    div
+                    a.link(href='mailto:email@website.com') email@website.com
+                    p
+        .col-md-6
+            div(style='height: 846px; overflow: hidden;')
+                #map(style='height:100%;')
+                    // <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23602386.549036242!2d34.96459006514799!3d53.846806194484834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93a5c7af6ab2f%3A0x31b7c3f443e026fb!2z0KPQk9CQ0KLQow!5e0!3m2!1sru!2sru!4v1678709138135!5m2!1sru!2sru" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.1301086456565!2d55.936295182963526!3d54.724926212432365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d93a5c7af6ab2f%3A0x31b7c3f443e026fb!2z0KPQk9CQ0KLQow!5e0!3m2!1sru!2sru!4v1678896688940!5m2!1sru!2sru' style='width:100%; height:100%; border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+                        
     script(type='text/javascript' src='javascripts/jquery-2.1.4.min.js')
     script(type='text/javascript' src="javascripts/contact.js") 
