@@ -7,4 +7,4 @@ const dbcontext = new Sequelize({
 // Экспорт подключения к БД для использования в других модулях
 module.exports = { 
 	dbcontext 
-} 
+} 	
