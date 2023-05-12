@@ -1,0 +1,1 @@
+router.get('/', mainController.get_contact_req_all); 
