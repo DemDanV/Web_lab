@@ -9,15 +9,15 @@ exports.navmenu = [
     },
     {
         name: 'UNITY',
-        addr: '#'
+        addr: '/unity'
     },
     {
         name: 'ANDROID',
-        addr: '#'
+        addr: '/android'
     },
     {
         name: 'BLOG',
-        addr: '#'
+        addr: '/blog'
     },
     {
         name: 'CONTACT',
