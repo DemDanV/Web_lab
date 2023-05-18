@@ -62,7 +62,7 @@ exports.get_contact_req_all = function(req, res) {
 // Показать запрос по имени автора.
 exports.get_contact_req_by_firstname = function(req, res) {
     dbcontext.query(
-        'SELECT * FROM contactrequests WHERE "firstname" = :firstname',
+        'SELECT * FROM contactrequests WHERE "name" = :firstname',
         {
             replacements: { firstname: req.params.firstname },
             type: dbcontext.QueryTypes.SELECT
@@ -129,7 +129,7 @@ exports.update_contact_req_by_id = function(req, res) {
     var curDateTime = new Date(Date.now());
     // Обновляем запись в БД
     dbcontext.query(
-        'UPDATE contactrequests SET reqtext = :reqtext, updatedAt = :updatedAt WHERE id = :id',
+        'UPDATE contactrequests SET message  = :reqtext , updatedAt = :updatedAt WHERE id = :id',
         {
             replacements: { id: req.params.id, reqtext: req.body.reqtext, updatedAt: curDateTime.toISOString() },
             type: dbcontext.QueryTypes.UPDATE
