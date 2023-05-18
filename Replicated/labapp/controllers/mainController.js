@@ -50,7 +50,7 @@ exports.get_contact_req_all = function(req, res) {
         'SELECT * FROM contactrequests', { type: dbcontext.QueryTypes.SELECT }
     )
     .then(data => {
-      res.json(data[0]);
+      res.json(data);
     })
     .catch(err => {
       res.status(500).send({
