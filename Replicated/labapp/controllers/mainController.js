@@ -220,3 +220,17 @@ exports.register_user = function(req, res) {
         res.status(500).json({ message: err.message });
     });
 };
+
+exports.getAllLogin = function(req, res) {
+    dbcontext.query(
+		'SELECT * FROM logins', { type: dbcontext.QueryTypes.SELECT }
+    )
+    .then(data => {
+		res.json(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || "Some error occurred on the server."
+      });
+    });
+};

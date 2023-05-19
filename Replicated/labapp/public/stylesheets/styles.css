@@ -1320,3 +1320,40 @@ img {
     color: #fff;
     width: 200px;
 }
+.container-login{
+    background-color: rgb(176, 185, 184);
+    width: 500px;
+    position:absolute;
+    margin:0 auto;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.auth-form{
+    padding: 10px;
+}
+.auth-form input{
+    width: 100%;
+    border: 1px solid rgb(62, 197, 130);
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 20px;
+}
+.buttons-login{
+    display: flex;
+    justify-content: space-between;
+}
+#sendbtn:hover{
+    background-color: #0d5227;
+    cursor: pointer;
+}

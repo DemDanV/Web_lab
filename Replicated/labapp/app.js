@@ -15,6 +15,7 @@ var androidRouter = require('./routes/android');
 var contactrequestRouter = require('./routes/contactrequest');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
+var login_usrequestRouter = require('./routes/contactLogin');
 
 var app = express();
 /* 
@@ -69,6 +70,7 @@ app.use('/contact', usersRouter);
 app.use('/api/contactrequest', contactrequestRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/api/login', login_usrequestRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

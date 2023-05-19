@@ -2,17 +2,16 @@ extends layout
 
 block content
     section.title-with-photo
-            .page-title
-                div
-                    span.big-title.uppercase.montserrat-text LogIn
-                    .small-title.uppercase.montserrat-text Please
-    section.container
-        .col-md-6
-            <form method="POST" action="/login">
-            <div class="auth-form">
-                <p><input name="loginField" type="text" placeholder="Login"></p>
-                <p><input name="passField" type="password" placeholder="Password"></p>
-                <button type="submit" id="sendbtn">Войти</button>
-                <button type="submit" id="sendbtn" name="regBtn" value="true">Регистрация</button>
+        .page-title
+            
+    <div class="container-login">
+        <form method="POST" action="/login">
+        <div class="auth-form">
+            <p><input name="loginField" type="text" placeholder="Login"></p>
+            <p><input name="passField" type="password" placeholder="Password"></p>
+            <div class="buttons-login">
+                <button class="btnLogin" type="submit" id="sendbtn">Войти</button>
+                <button class="btnReg" type="submit" id="sendbtn" name="regBtn" value="true">Регистрация</button>
             </div>
-            </form>
+        </div>
+        </form>
