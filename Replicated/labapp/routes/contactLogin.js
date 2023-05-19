@@ -10,7 +10,4 @@ var mainController = require('../controllers/mainController');  // подклю�
 */
 
 router.get('/', mainController.getAllLogin);
-// router.post('/', mainController.createLogin);
-// router.delete('/', mainController.deleteAllLogin);
-// router.post('/enter/', mainController.loginCheck);
 module.exports = router;

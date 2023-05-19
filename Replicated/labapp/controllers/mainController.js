@@ -183,7 +183,7 @@ exports.login_user = function(req, res) {
             req.session.userId = user.id;
             // высылаем сессионную cookie AuthToken с логином
             res.cookie('AuthToken', user.username);
-            res.redirect('/');
+            res.redirect('/contact');
         }
     })
     .catch(err => {
