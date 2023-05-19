@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-var main_controller = require('../controllers/mainController');
-
+// var main_controller = require('../controllers/mainController');
+// подключение необходимых ресурсов из контроллера
+var { navmenu, sessionCheck } = require('../controllers/mainController');
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', sessionCheck, function(req, res, next) {
   res.render('contact', { 
     title: 'contact',
-    navmenu: main_controller.navmenu });
+    navmenu: navmenu });
 });
 
 // Обработка POST-запроса (принимаем данные, отправленные c помощью AJAX со страницы /contact)
